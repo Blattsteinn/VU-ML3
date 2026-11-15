@@ -10,7 +10,6 @@ K_RANGE = range(1, 11)
 def elbow(X, k_range=K_RANGE):
     rows = []
     for k in k_range:
-        # var(k) = E_k-means (sum of squared distances to own cluster center)
         km = KMeans(n_clusters=k, n_init=10, random_state=RANDOM_STATE).fit(X)
         rows.append({"k": k, "var_k": km.inertia_})
     df = pd.DataFrame(rows)
@@ -39,12 +38,12 @@ def main():
     df = elbow(X.to_numpy())
     print(df.to_string(index=False, float_format=lambda v: f"{v:.1f}"))
 
-    csv_path = CSV_DIR / "elbow_B.csv"
+    csv_path = CSV_DIR / "3_section_elbow.csv"
     df.to_csv(csv_path, index=False)
-    img_path = IMG_DIR / "elbow_B.png"
+    img_path = IMG_DIR / "3_section_elbow.png"
     plot_elbow(df, img_path)
-    print(f"Table: {csv_path}")
-    print(f"Plot: {img_path}")
+    print(f"Table: {csv_path.name}")
+    print(f"Plot: {img_path.name}")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,7 @@
 img/
-csv/
+csv/*
+!csv/B.csv
+!csv/B_no_outliers.csv
+!csv/B_no_outlier.csv
 .venv/
 __pycache__/

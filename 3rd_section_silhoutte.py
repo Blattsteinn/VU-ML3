@@ -7,7 +7,7 @@ from sklearn.metrics import silhouette_samples, silhouette_score
 from common import IMG_DIR, RANDOM_STATE, load_B
 
 K_RANGE = range(2, 11)
-K_CHOSEN = 3
+K_CHOSEN = 4
 
 
 def fit_kmeans(X, k):
