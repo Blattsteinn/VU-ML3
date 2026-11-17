@@ -4,7 +4,7 @@ from sklearn.cluster import KMeans
 
 from common import CSV_DIR, IMG_DIR, RANDOM_STATE, load_B
 
-K_GROUPS = [[2, 3], [4, 5]]
+K_GROUPS = [[2, 3], [4, 5], [6]]
 
 pd.set_option("display.width", 200)
 pd.set_option("display.max_columns", 20)
